@@ -46,6 +46,15 @@ function escreverErro(letra, erros) {
     jogo.fillText(letra, 400 + (40 * (10 -erros)), 500, 36);
 }
 
+function verificarAcertos() {
+    if(acertos === segredo.length) {
+        jogo.fillText("UHUU  ACERTOU!!!", 502, 200)
+        document.onkeydown = (e) => {
+            window.location.reload();
+        }
+    }
+}
+
 function bonequinho(gameOver) {
 
     if(gameOver === 8){
@@ -101,7 +110,10 @@ function bonequinho(gameOver) {
         jogo.stroke();
     }
 
-    if(gameOver < 0) {
-        jogo.fillText("GAME  OVER", 507, 200)
+    if(gameOver === -1) {
+        jogo.fillText("GAME  OVER", 510, 200)
+        document.onkeydown = (e) => {
+            window.location.reload();
+        }
     }
 }
