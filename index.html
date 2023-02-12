@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Jogo da Forca</title>
+    
 </head>
 <body>
+    <header>
+
+    </header>
     
+    <main>
+        <section class="menuInicial">
+            <input id="btnIniciar" type="submit" value="Iniciar Jogo" onclick="iniciarJogo()">
+            <input id="addPalavra" type="text" placeholder="Adicionar palavra à lista">
+        </section>
+        
+        <section class="tabuleiro">
+            <canvas id="forca" height="860" width="1200"></canvas>
+        </section>
+        
+    </main>
+    
+    <script type="text/javascript" src="./js/forca.js"></script>
+    <script type="text/javascript" src="./js/canvas.js"></script>
 </body>
 </html>
