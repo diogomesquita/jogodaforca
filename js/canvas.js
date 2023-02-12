@@ -5,10 +5,10 @@ function desenharCanvas() {
     jogo.fillStyle = "#F3F5FC"
     jogo.strokeStyle = "#0A3871"
 
-    jogo.fillRect(0, 0, 1200, 860);
+    jogo.fillRect(0, 0, 1280, 800);
     jogo.beginPath();
-    jogo.moveTo(900, 500);
-    jogo.lineTo(650, 500);
+    jogo.moveTo(500, 350);
+    jogo.lineTo(800, 350);
     jogo.stroke();
     jogo.closePath();
 }
@@ -22,8 +22,8 @@ function desenharLinhas() {
 
     let tracinhosPalavra = 600/segredo.length;
     for(let i = 0; i < segredo.length; i++) {
-        jogo.moveTo(500+(tracinhosPalavra * i), 640);
-        jogo.lineTo(550+(tracinhosPalavra * i), 640);
+        jogo.moveTo(370+(tracinhosPalavra * i), 450);
+        jogo.lineTo(420+(tracinhosPalavra * i), 450);
     }
     jogo.stroke();
     jogo.closePath();
