@@ -35,7 +35,7 @@ function escreverAcerto(index) {
     jogo.fillStyle = "#0A3871";
     jogo.lineWidth = 6;
     let tracinhosPalavra = 600/segredo.length;
-    jogo.fillText(segredo[index], 505+(tracinhosPalavra * index), 620);
+    jogo.fillText(segredo[index], 375 + (tracinhosPalavra * index), 430);
 }
 
 function escreverErro(letra, erros) {
@@ -43,5 +43,65 @@ function escreverErro(letra, erros) {
     jogo.lineCap = "round";
     jogo.fillStyle = "#0A3871";
     jogo.lineWidth = 6;
-    jogo.fillText(letra, 520 + (40 * (10 -erros)), 700, 36);
+    jogo.fillText(letra, 400 + (40 * (10 -erros)), 500, 36);
+}
+
+function bonequinho(gameOver) {
+
+    if(gameOver === 8){
+        jogo.moveTo(500, 350);
+        jogo.lineTo(500, 50);
+        jogo.stroke();
+    }
+
+    if(gameOver === 7){
+        jogo.moveTo(500, 50);
+        jogo.lineTo(650, 50);
+        jogo.stroke();
+    }
+
+    if(gameOver === 6){
+        jogo.moveTo(630, 50);
+        jogo.lineTo(630, 100);
+        jogo.stroke();
+    }
+
+    if(gameOver === 5){
+        jogo.arc(630, 120, 20, 0, Math.PI*2, true);
+        jogo.stroke();
+    }
+
+    if(gameOver === 4){
+        jogo.moveTo(630, 140);
+        jogo.lineTo(630, 200);
+        jogo.stroke();
+    }
+
+    if(gameOver === 3){
+        jogo.moveTo(630, 200);
+        jogo.lineTo(660, 250);
+        jogo.stroke();
+    }
+
+    if(gameOver === 2){
+        jogo.moveTo(630, 200);
+        jogo.lineTo(600, 250);
+        jogo.stroke();
+    }
+
+    if(gameOver === 1){
+        jogo.moveTo(630, 155);
+        jogo.lineTo(660, 160);
+        jogo.stroke();
+    }
+
+    if(gameOver === 0){
+        jogo.moveTo(630, 155);
+        jogo.lineTo(600, 160);
+        jogo.stroke();
+    }
+
+    if(gameOver < 0) {
+        jogo.fillText("GAME  OVER", 507, 200)
+    }
 }

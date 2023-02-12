@@ -3,7 +3,7 @@ let jogo = document.querySelector("#forca").getContext('2d');
 let segredos = ["DEUS", "VIDA", "FAMILIA", "GRATIDAO", "SUCESSO", "LIBERDADE", "PAZ", "RESPEITO", "OBJETIVO", "ESCOLHAS"];
 let segredo = "";
 let letras = [];
-let gameOver = 8;
+let gameOver = 9;
 
 addPalavra.addEventListener("keydown", (e) => {
     if(e.keyCode === 13) {
@@ -35,6 +35,7 @@ function verificarLetra(key) {
 
 function contarErros() {
     gameOver -= 1;
+    bonequinho(gameOver);
     console.log(gameOver);
 }
 
@@ -55,7 +56,7 @@ function iniciarJogo() {
                 }
             }
         } else {
-            contarErros(letra);
+            contarErros();
             escreverErro(letra, gameOver);
         }
     }
